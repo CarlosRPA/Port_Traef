@@ -344,3 +344,6 @@ esac
 
 # Fim do script
 exit 0
+
+# Fim do script
+exit 0
