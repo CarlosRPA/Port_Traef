@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Instalação Docker
-
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y apparmor-utils
-
 
 ##################################################
 
@@ -22,6 +19,19 @@ function prompt_input {
 
 clear
 
+echo -e "\e[32m
+
+        ██████╗ ██╗   ██╗    ██████╗ ██████╗  █████╗ 
+        ██╔══██╗╚██╗ ██╔╝    ██╔══██╗██╔══██╗██╔══██╗
+        ██████╔╝ ╚████╔╝     ██████╔╝██████╔╝███████║
+        ██╔══██╗  ╚██╔╝      ██╔══██╗██╔═══╝ ██╔══██║
+        ██████╔╝   ██║       ██║  ██║██║     ██║  ██║
+        ╚═════╝    ╚═╝       ╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝\e[0m"
+echo -e "\e[32m                          BY RPA                                      \e[0m"
+echo -e "\e[32m                  AUTOR ==> CARLOS FRAZÃO <==                           \e[0m"
+echo -e "\e[32m\e[0m"
+
+echo ""
 echo ""
 echo -e "\e[32m==============================================================================\e[0m"
 echo -e "\e[32m=                                                                            =\e[0m"
@@ -307,20 +317,20 @@ case $option in
   1)
     # Adicione aqui os comandos para instalar o TYPEBOT N8N EVOLUTION-API CHATWOOT
     git clone https://github.com/CarlosRPA/Repos_TY_N_E_C_.git
-    chmod +x Repos_TY_N_E_C_
-    ./Repos_TY_N_E_C_
+    chmod +x Repos_TY_N_E_C_.sh
+    ./Repos_TY_N_E_C_.sh
     ;;
   2)
     # Adicione aqui os comandos para instalar o TYPEBOT N8N EVOLUTION-API
     git clone https://github.com/CarlosRPA/_TY_N_E_.git
-    chmod +x _TY_N_E_
-    ./_TY_N_E_
+    chmod +x _TY_N_E_.sh
+    ./_TY_N_E_.sh
     ;;
   3)
     # Adicione aqui os comandos para instalar o TYPEBOT EVOLUTION-API
     git clone https://github.com/CarlosRPA/_TY_E_.git
-    chmod +x _TY_E_
-    ./_TY_E_
+    chmod +x _TY_E_.sh
+    ./_TY_E_.sh
     ;;    
   4)
     # Sair
