@@ -349,3 +349,25 @@ esac
 
 # Fim do script
 exit 0
+
+#########################################################
+
+cd
+
+clear
+
+cd /home/ubuntu/install_P_T_TY_N_E_W_C_
+
+# Retorna para o instalador.sh
+# Exibe uma mensagem de confirmação
+read -p "Deseja voltar para o MENU PRINCIPAL? (Y/N): " choice
+
+# Verifica a escolha do usuário
+if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
+  sudo chmod +x instalador.sh && ./instalador.sh
+  echo "Comando executado."
+elif [ "$choice" == "N" ] || [ "$choice" == "n" ]; then
+  echo "Comando não executado. Continuando..."
+else
+  echo "Escolha inválida. Saindo."
+fi
