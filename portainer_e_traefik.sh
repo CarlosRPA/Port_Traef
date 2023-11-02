@@ -22,19 +22,6 @@ function prompt_input {
 
 clear
 
-echo -e "\e[32m
-
-        ██████╗ ██╗   ██╗    ██████╗ ██████╗  █████╗ 
-        ██╔══██╗╚██╗ ██╔╝    ██╔══██╗██╔══██╗██╔══██╗
-        ██████╔╝ ╚████╔╝     ██████╔╝██████╔╝███████║
-        ██╔══██╗  ╚██╔╝      ██╔══██╗██╔═══╝ ██╔══██║
-        ██████╔╝   ██║       ██║  ██║██║     ██║  ██║
-        ╚═════╝    ╚═╝       ╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝\e[0m"
-echo -e "\e[32m                          BY RPA                                      \e[0m"
-echo -e "\e[32m                  AUTOR ==> CARLOS FRAZÃO <==                           \e[0m"
-echo -e "\e[32m\e[0m"
-
-echo ""
 echo ""
 echo -e "\e[32m==============================================================================\e[0m"
 echo -e "\e[32m=                                                                            =\e[0m"
@@ -280,10 +267,70 @@ sudo sed -i "s/- \"traefik\.http\.routers\.portainer\.rule=Host()\"/- \"traefik.
 
 sudo docker stack deploy --prune --resolve-image always -c portainer.yaml portainer
 
-# Pausa de 15 segundos
-sleep 15
+##################################################
+
+# Exibe o banner informativo
+
+display_banner() {
+  echo -e "\e[32m             ===================================="
+  echo -e "                     FAÇA A SUA ESCOLHA\e[0m"
+  echo -e "\e[32m             ====================================\e[0m"
+}
+
+# Função para exibir o menu
+display_menu() { 
+  echo ""
+  echo -e "\e[34mEscolha uma opção para instalação:\e[0m"
+  echo ""
+  echo -e "  1. \e[31mInstalar TYPEBOT N8N EVOLUTION-API CHATWOOT\e[0m"   
+  echo -e "  2. \e[31mInstalar TYPEBOT N8N EVOLUTION-API\e[0m"
+  echo -e "  3. \e[31mInstalar TYPEBOT EVOLUTION-API\e[0m"  
+  echo -e "  4. \e[31mSair\e[0m"
+  echo ""
+}
 
 #########################################################
 
-# Baixar Repositório Typeboot N8N Evolution & Chatwoot
-git clone https://github.com/CarlosRPA/Repos_TY_N_E_C_.sh.git
+# Exibe o banner informativo
+display_banner
+
+# Exibe o menu
+display_menu
+
+#########################################################
+
+# Ler a opção escolhida pelo usuário
+read -p "Digite o número da opção desejada e pressione Enter: " option
+
+# Executa a ação correspondente à opção escolhida
+case $option in
+  1)
+    # Adicione aqui os comandos para instalar o TYPEBOT N8N EVOLUTION-API CHATWOOT
+    git clone https://github.com/CarlosRPA/Repos_TY_N_E_C_.git
+    chmod +x Repos_TY_N_E_C_
+    ./Repos_TY_N_E_C_
+    ;;
+  2)
+    # Adicione aqui os comandos para instalar o TYPEBOT N8N EVOLUTION-API
+    git clone https://github.com/CarlosRPA/_TY_N_E_.git
+    chmod +x _TY_N_E_
+    ./_TY_N_E_
+    ;;
+  3)
+    # Adicione aqui os comandos para instalar o TYPEBOT EVOLUTION-API
+    git clone https://github.com/CarlosRPA/_TY_E_.git
+    chmod +x _TY_E_
+    ./_TY_E_
+    ;;    
+  4)
+    # Sair
+    echo "Saindo do instalador."
+    exit 0
+    ;; 
+  *)
+    echo "Opção inválida. Por favor, escolha uma opção válida."
+    ;;
+esac
+
+# Fim do script
+exit 0
