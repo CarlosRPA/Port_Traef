@@ -317,20 +317,23 @@ case $option in
   1)
     # Adicione aqui os comandos para instalar o TYPEBOT N8N EVOLUTION-API CHATWOOT
     git clone https://github.com/CarlosRPA/Repos_TY_N_E_C_.git
-    chmod +x Repos_TY_N_E_C_.sh
-    ./Repos_TY_N_E_C_.sh
+    cd Repos_TY_N_E_C_
+    chmod +x _TY_N_E_C_.sh
+    ./_TY_N_E_C_.sh
     ;;
   2)
     # Adicione aqui os comandos para instalar o TYPEBOT N8N EVOLUTION-API
     git clone https://github.com/CarlosRPA/_TY_N_E_.git
-    chmod +x _TY_N_E_.sh
-    ./_TY_N_E_.sh
+    cd _TY_N_E_
+    chmod +x Repos_TY_N_E_.sh
+    ./Repos_TY_N_E_.sh
     ;;
   3)
     # Adicione aqui os comandos para instalar o TYPEBOT EVOLUTION-API
     git clone https://github.com/CarlosRPA/_TY_E_.git
-    chmod +x _TY_E_.sh
-    ./_TY_E_.sh
+    cd _TY_E_
+    chmod +x Repos_TY_E_.sh
+    ./Repos_TY_E_.sh
     ;;    
   4)
     # Sair
@@ -341,9 +344,6 @@ case $option in
     echo "Opção inválida. Por favor, escolha uma opção válida."
     ;;
 esac
-
-# Fim do script
-exit 0
 
 # Fim do script
 exit 0
