@@ -282,3 +282,8 @@ sudo docker stack deploy --prune --resolve-image always -c portainer.yaml portai
 
 # Pausa de 15 segundos
 sleep 15
+
+#########################################################
+
+# Baixar Repositório Typeboot N8N Evolution & Chatwoot
+git clone https://github.com/CarlosRPA/Repos_TY_N_E_C_.sh.git
