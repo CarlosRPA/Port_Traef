@@ -279,6 +279,8 @@ sudo docker stack deploy --prune --resolve-image always -c portainer.yaml portai
 
 ##################################################
 
+cd install_P_T_TY_N_E_W_C_/Port_Traef
+
 # Exibe o banner informativo
 
 display_banner() {
