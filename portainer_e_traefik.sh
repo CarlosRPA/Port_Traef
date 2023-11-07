@@ -66,7 +66,14 @@ while true; do
 
  # Pergunte ao usuário se as informações estão corretas
 
-    echo ""  
+    echo ""
+    echo -e "\n\033[31m              ╔════════════════════════════════════════════════════════╗\033[0m"
+    echo -e "\033[31m              ║                                                        ║\033[0m"
+    echo -e "\033[31m              ║  \033[34m   Verifique se os dados abaixos estão ccorretos      \033[31m║\033[0m"
+    echo -e "\033[31m              ║                                                        ║\033[0m"
+    echo -e "\033[31m              ╚════════════════════════════════════════════════════════╝\033[0m\n"
+
+    echo ""
     echo "As informações fornecidas estão corretas?"
     echo ""
     echo -e "\033[34m- Domínio do Portainer:\033[33m $portainer\033[0m"
